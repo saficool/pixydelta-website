@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PixyDelta | Coding & AI for Kids in Cooch Behar</title>
-    <meta name="description" content="A 12-week coding and AI bootcamp for Classes 6-9 in Cooch Behar. Taught by a local software developer.">
+    <meta name="description"
+        content="A 12-week Python, AI and capstone learning journey for Classes 6-9 in Cooch Behar. Real projects, practical mentoring, and a clear path from Python to AI to capstone building.">
 
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Fonts: Caveat (handwritten), Inter (clean body) -->
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <script>
@@ -35,6 +39,7 @@
         body {
             background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000000' fill-opacity='0.02'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5z'/%3E%3C/g%3E%3C/svg%3E");
         }
+
         .hand-underline {
             background-image: url("data:image/svg+xml,%3Csvg width='200' height='8' viewBox='0 0 200 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 4 Q 50 0, 100 4 T 200 4' stroke='%23f59e0b' stroke-width='2' fill='none'/%3E%3C/svg%3E");
             background-repeat: no-repeat;
@@ -42,11 +47,19 @@
             background-size: 100% 8px;
             padding-bottom: 8px;
         }
-        .tilt-left { transform: rotate(-2deg); }
-        .tilt-right { transform: rotate(2deg); }
+
+        .tilt-left {
+            transform: rotate(-2deg);
+        }
+
+        .tilt-right {
+            transform: rotate(2deg);
+        }
+
         .tape {
             position: relative;
         }
+
         .tape::before {
             content: '';
             position: absolute;
@@ -64,23 +77,58 @@
         .reveal {
             opacity: 0;
             transform: translateY(18px);
-            transition: opacity 650ms ease, transform 650ms cubic-bezier(.2,.7,.2,1);
+            transition: opacity 650ms ease, transform 650ms cubic-bezier(.2, .7, .2, 1);
         }
-        .reveal.is-visible { opacity: 1; transform: translateY(0); }
-        .reveal-delay-1 { transition-delay: 90ms; }
-        .reveal-delay-2 { transition-delay: 180ms; }
 
-        .project-card, .feature-card, .cta-button {
+        .reveal.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-delay-1 {
+            transition-delay: 90ms;
+        }
+
+        .reveal-delay-2 {
+            transition-delay: 180ms;
+        }
+
+        .project-card,
+        .feature-card,
+        .cta-button {
             transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
         }
-        .project-card:hover { transform: translateY(-4px); box-shadow: 0 14px 28px rgba(0,0,0,.08); }
-        .feature-card:hover { transform: translateY(-3px); }
-        .feature-card:hover .feature-icon { transform: rotate(-4deg) scale(1.06); }
-        .feature-icon { transition: transform 220ms ease; }
-        .cta-button:hover { transform: translateY(-2px); box-shadow: 0 8px 18px rgba(37,99,235,.18); }
 
-        .code-window { animation: gentle-float 5s ease-in-out infinite; }
-        .week-note { animation: note-bob 4s ease-in-out infinite; }
+        .project-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 14px 28px rgba(0, 0, 0, .08);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .feature-card:hover .feature-icon {
+            transform: rotate(-4deg) scale(1.06);
+        }
+
+        .feature-icon {
+            transition: transform 220ms ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(37, 99, 235, .18);
+        }
+
+        .code-window {
+            animation: gentle-float 5s ease-in-out infinite;
+        }
+
+        .week-note {
+            animation: note-bob 4s ease-in-out infinite;
+        }
+
         .cursor-blink::after {
             content: '';
             display: inline-block;
@@ -91,86 +139,200 @@
             background: #16a34a;
             animation: blink 1s steps(2, start) infinite;
         }
-        .whatsapp-float { animation: whatsapp-pulse 3s ease-in-out infinite; }
+
+        .whatsapp-float {
+            animation: whatsapp-pulse 3s ease-in-out infinite;
+        }
 
         @keyframes gentle-float {
-            0%, 100% { transform: rotate(2deg) translateY(0); }
-            50% { transform: rotate(2deg) translateY(-5px); }
+
+            0%,
+            100% {
+                transform: rotate(2deg) translateY(0);
+            }
+
+            50% {
+                transform: rotate(2deg) translateY(-5px);
+            }
         }
+
         @keyframes note-bob {
-            0%, 100% { transform: rotate(-2deg) translateY(0); }
-            50% { transform: rotate(-2deg) translateY(-3px); }
+
+            0%,
+            100% {
+                transform: rotate(-2deg) translateY(0);
+            }
+
+            50% {
+                transform: rotate(-2deg) translateY(-3px);
+            }
         }
-        @keyframes blink { 50% { opacity: 0; } }
+
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+
         @keyframes whatsapp-pulse {
-            0%, 100% { box-shadow: 0 10px 20px rgba(0,0,0,.15), 0 0 0 0 rgba(34,197,94,.20); }
-            50% { box-shadow: 0 10px 20px rgba(0,0,0,.15), 0 0 0 8px rgba(34,197,94,0); }
+
+            0%,
+            100% {
+                box-shadow: 0 10px 20px rgba(0, 0, 0, .15), 0 0 0 0 rgba(34, 197, 94, .20);
+            }
+
+            50% {
+                box-shadow: 0 10px 20px rgba(0, 0, 0, .15), 0 0 0 8px rgba(34, 197, 94, 0);
+            }
         }
 
 
         /* Parent-friendly journey graphics: visual enough to feel modern, restrained enough to stay credible */
-        .journey-card { position: relative; overflow: hidden; }
+        .journey-card {
+            position: relative;
+            overflow: hidden;
+        }
+
         .journey-card::after {
             content: '';
             position: absolute;
-            width: 150px; height: 150px;
-            right: -70px; top: -70px;
+            width: 150px;
+            height: 150px;
+            right: -70px;
+            top: -70px;
             border-radius: 999px;
             background: currentColor;
             opacity: .035;
             pointer-events: none;
         }
+
         .journey-visual {
-            width: 104px; min-width: 104px; height: 104px;
+            width: 104px;
+            min-width: 104px;
+            height: 104px;
             border-radius: 18px;
-            display: flex; align-items: center; justify-content: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             position: relative;
             transition: transform 280ms ease;
         }
-        .journey-card:hover .journey-visual { transform: translateY(-3px) rotate(1deg); }
-        .journey-visual .main-icon { font-size: 2.1rem; }
+
+        .journey-card:hover .journey-visual {
+            transform: translateY(-3px) rotate(1deg);
+        }
+
+        .journey-visual .main-icon {
+            font-size: 2.1rem;
+        }
+
         .mini-chip {
             position: absolute;
             background: white;
-            border: 1px solid rgba(0,0,0,.07);
-            box-shadow: 0 5px 14px rgba(0,0,0,.07);
+            border: 1px solid rgba(0, 0, 0, .07);
+            box-shadow: 0 5px 14px rgba(0, 0, 0, .07);
             border-radius: 8px;
             padding: 5px 7px;
             font-size: .68rem;
             font-weight: 700;
             animation: mini-float 4.5s ease-in-out infinite;
         }
-        .mini-chip.one { top: 8px; right: -8px; }
-        .mini-chip.two { bottom: 8px; left: -9px; animation-delay: -2s; }
-        .journey-arrow { animation: arrow-nudge 2.8s ease-in-out infinite; }
-        @keyframes mini-float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
-        @keyframes arrow-nudge { 0%,100% { transform: translateY(0); opacity: .45; } 50% { transform: translateY(4px); opacity: .8; } }
+
+        .mini-chip.one {
+            top: 8px;
+            right: -8px;
+        }
+
+        .mini-chip.two {
+            bottom: 8px;
+            left: -9px;
+            animation-delay: -2s;
+        }
+
+        .journey-arrow {
+            animation: arrow-nudge 2.8s ease-in-out infinite;
+        }
+
+        @keyframes mini-float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-3px);
+            }
+        }
+
+        @keyframes arrow-nudge {
+
+            0%,
+            100% {
+                transform: translateY(0);
+                opacity: .45;
+            }
+
+            50% {
+                transform: translateY(4px);
+                opacity: .8;
+            }
+        }
 
         .ai-orbit {
             position: relative;
-            width: 170px; height: 170px;
+            width: 170px;
+            height: 170px;
             margin: 0 auto;
-            display: flex; align-items: center; justify-content: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
+
         .ai-core {
-            width: 82px; height: 82px; border-radius: 22px;
-            background: white; border: 1px solid #dbeafe;
-            box-shadow: 0 14px 32px rgba(37,99,235,.12);
-            display: flex; align-items: center; justify-content: center;
-            font-size: 2rem; color: #2563eb;
+            width: 82px;
+            height: 82px;
+            border-radius: 22px;
+            background: white;
+            border: 1px solid #dbeafe;
+            box-shadow: 0 14px 32px rgba(37, 99, 235, .12);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: #2563eb;
             animation: core-breathe 4s ease-in-out infinite;
         }
+
         .orbit-dot {
             position: absolute;
-            width: 42px; height: 42px; border-radius: 999px;
-            background: white; border: 1px solid #e5e7eb;
-            box-shadow: 0 7px 18px rgba(0,0,0,.07);
-            display: flex; align-items: center; justify-content: center;
+            width: 42px;
+            height: 42px;
+            border-radius: 999px;
+            background: white;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 7px 18px rgba(0, 0, 0, .07);
+            display: flex;
+            align-items: center;
+            justify-content: center;
             color: #6b7280;
         }
-        .orbit-dot.a { top: 4px; left: 64px; }
-        .orbit-dot.b { right: 2px; bottom: 30px; }
-        .orbit-dot.c { left: 2px; bottom: 30px; }
+
+        .orbit-dot.a {
+            top: 4px;
+            left: 64px;
+        }
+
+        .orbit-dot.b {
+            right: 2px;
+            bottom: 30px;
+        }
+
+        .orbit-dot.c {
+            left: 2px;
+            bottom: 30px;
+        }
+
         .ai-orbit::before {
             content: '';
             position: absolute;
@@ -179,22 +341,368 @@
             border-radius: 999px;
             animation: orbit-spin 18s linear infinite;
         }
-        @keyframes orbit-spin { to { transform: rotate(360deg); } }
-        @keyframes core-breathe { 50% { transform: scale(1.035); box-shadow: 0 16px 36px rgba(37,99,235,.17); } }
+
+        @keyframes orbit-spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes core-breathe {
+            50% {
+                transform: scale(1.035);
+                box-shadow: 0 16px 36px rgba(37, 99, 235, .17);
+            }
+        }
+
+
+        /* Revised 5 + 4 + 3 curriculum visuals */
+        .phase-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: .45rem;
+            padding: .55rem .8rem;
+            border-radius: 999px;
+            font-weight: 700;
+            font-size: .82rem;
+            border: 1px solid rgba(0, 0, 0, .07);
+            background: white;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, .04);
+        }
+
+        .phase-stack {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: .85rem;
+            padding-left: 1rem;
+        }
+
+        .phase-stack::before {
+            content: '';
+            position: absolute;
+            left: 18px;
+            top: 10px;
+            bottom: 10px;
+            width: 2px;
+            border-radius: 999px;
+            background: linear-gradient(180deg, rgba(37, 99, 235, .12), rgba(37, 99, 235, .35), rgba(37, 99, 235, .12));
+        }
+
+        .phase-stack::after {
+            content: '';
+            position: absolute;
+            left: 13px;
+            top: 8px;
+            width: 12px;
+            height: 12px;
+            border-radius: 999px;
+            background: currentColor;
+            opacity: .22;
+            box-shadow: 0 0 0 5px color-mix(in srgb, currentColor 10%, transparent);
+            animation: stack-travel 4.6s ease-in-out infinite;
+        }
+
+        .phase-stack.green::before {
+            background: linear-gradient(180deg, rgba(22, 163, 74, .12), rgba(22, 163, 74, .35), rgba(22, 163, 74, .12));
+        }
+
+        .phase-stack.amber::before {
+            background: linear-gradient(180deg, rgba(245, 158, 11, .12), rgba(245, 158, 11, .35), rgba(245, 158, 11, .12));
+        }
+
+        @keyframes stack-travel {
+
+            0%,
+            100% {
+                transform: translateY(0);
+                opacity: .18;
+            }
+
+            50% {
+                transform: translateY(calc(100% + 150px));
+                opacity: .42;
+            }
+        }
+
+        .stack-step {
+            display: flex;
+            align-items: center;
+            gap: .8rem;
+            margin-left: 1.3rem;
+            padding: .82rem 1rem;
+            border-radius: 999px;
+            border: 1px solid #e5e7eb;
+            background: rgba(255, 255, 255, .96);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, .05);
+            transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+            max-width: 720px;
+            position: relative;
+        }
+
+        .stack-step:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 24px rgba(0, 0, 0, .08);
+        }
+
+        .stack-step.offset {
+            margin-left: 3rem;
+        }
+
+        .stack-step::before {
+            content: '';
+            position: absolute;
+            left: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 2px;
+            background: color-mix(in srgb, currentColor 28%, white);
+            opacity: .7;
+        }
+
+        .step-no {
+            width: 34px;
+            height: 34px;
+            border-radius: 999px;
+            flex: 0 0 auto;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: .84rem;
+            font-weight: 800;
+            color: currentColor;
+            background: color-mix(in srgb, currentColor 11%, white);
+            border: 1px solid color-mix(in srgb, currentColor 22%, white);
+        }
+
+        .pill-copy {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.18;
+        }
+
+        .pill-copy strong {
+            font-size: .87rem;
+            color: #111827;
+            margin-bottom: .12rem;
+        }
+
+        .pill-copy span {
+            font-size: .78rem;
+            color: #6b7280;
+        }
+
+        .proof-card {
+            transition: transform 220ms ease, box-shadow 220ms ease;
+        }
+
+        .proof-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 24px rgba(0, 0, 0, .06);
+        }
+
+        @media (max-width: 767px) {
+            .phase-stack {
+                padding-left: .5rem;
+            }
+
+            .phase-stack::before {
+                left: 14px;
+            }
+
+            .phase-stack::after {
+                left: 9px;
+            }
+
+            .stack-step,
+            .stack-step.offset {
+                margin-left: 1.1rem;
+            }
+
+            .stack-step {
+                border-radius: 22px;
+                padding: .85rem .9rem;
+            }
+
+            .stack-step::before {
+                left: -16px;
+                width: 16px;
+            }
+
+            .pill-copy strong {
+                font-size: .84rem;
+            }
+
+            .pill-copy span {
+                font-size: .76rem;
+            }
+        }
 
         @media (prefers-reduced-motion: reduce) {
-            html { scroll-behavior: auto !important; }
-            *, *::before, *::after {
+            html {
+                scroll-behavior: auto !important;
+            }
+
+            *,
+            *::before,
+            *::after {
                 animation-duration: 0.01ms !important;
                 animation-iteration-count: 1 !important;
                 transition-duration: 0.01ms !important;
                 scroll-behavior: auto !important;
             }
-            .reveal { opacity: 1; transform: none; }
+
+            .reveal {
+                opacity: 1;
+                transform: none;
+            }
         }
 
+        /* Dark theme */
+        html.dark body {
+            background-color: #0f172a !important;
+            color: #e5e7eb !important;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.025'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3z'/%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        html.dark nav {
+            background-color: rgba(15, 23, 42, .95) !important;
+            border-color: #334155 !important;
+        }
+
+        html.dark .bg-paper {
+            background-color: #0f172a !important;
+        }
+
+        html.dark .bg-white {
+            background-color: #111827 !important;
+        }
+
+        html.dark .bg-gray-50 {
+            background-color: #111827 !important;
+        }
+
+        html.dark .bg-gray-100 {
+            background-color: #1f2937 !important;
+        }
+
+        html.dark .bg-blue-50,
+        html.dark .bg-blue-50\/60 {
+            background-color: rgba(30, 58, 138, .22) !important;
+        }
+
+        html.dark .bg-amber-50 {
+            background-color: rgba(120, 53, 15, .22) !important;
+        }
+
+        html.dark .bg-green-50 {
+            background-color: rgba(20, 83, 45, .22) !important;
+        }
+
+        html.dark .bg-green-100 {
+            background-color: rgba(22, 101, 52, .28) !important;
+        }
+
+        html.dark .text-ink,
+        html.dark .text-gray-900,
+        html.dark .text-gray-800,
+        html.dark .text-gray-700 {
+            color: #f3f4f6 !important;
+        }
+
+        html.dark .text-muted,
+        html.dark .text-gray-600,
+        html.dark .text-gray-500 {
+            color: #aeb8c6 !important;
+        }
+
+        html.dark .border-gray-100,
+        html.dark .border-gray-200,
+        html.dark .border-gray-300 {
+            border-color: #334155 !important;
+        }
+
+        html.dark .border-blue-100 {
+            border-color: rgba(96, 165, 250, .25) !important;
+        }
+
+        html.dark .border-amber-100 {
+            border-color: rgba(245, 158, 11, .25) !important;
+        }
+
+        html.dark .week-chip,
+        html.dark .phase-pill,
+        html.dark .mini-chip {
+            background: #111827 !important;
+            border-color: #334155 !important;
+            color: #e5e7eb !important;
+        }
+
+        html.dark .week-chip strong {
+            color: #f9fafb !important;
+        }
+
+        html.dark .ai-core,
+        html.dark .orbit-dot {
+            background: #111827 !important;
+            border-color: #334155 !important;
+        }
+
+        html.dark .project-card:hover,
+        html.dark .proof-card:hover {
+            box-shadow: 0 14px 30px rgba(0, 0, 0, .35);
+        }
+
+        html.dark .hand-underline {
+            filter: brightness(1.08);
+        }
+
+        .theme-toggle {
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #d1d5db;
+            color: #374151;
+            background: rgba(255, 255, 255, .75);
+            transition: transform 180ms ease, background-color 180ms ease, border-color 180ms ease, color 180ms ease;
+        }
+
+        .theme-toggle:hover {
+            transform: translateY(-1px) rotate(4deg);
+            border-color: #93c5fd;
+            color: #2563eb;
+        }
+
+        html.dark .theme-toggle {
+            background: #111827;
+            color: #fbbf24;
+            border-color: #334155;
+        }
+
+        html.dark .stack-step {
+            background: rgba(255, 255, 255, .06);
+            border-color: rgba(148, 163, 184, .22);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, .22);
+        }
+
+        html.dark .pill-copy strong {
+            color: #f8fafc;
+        }
+
+        html.dark .pill-copy span {
+            color: #cbd5e1;
+        }
+
+        html.dark .phase-stack::before {
+            opacity: .9;
+        }
     </style>
 </head>
+
 <body class="font-body text-ink bg-paper antialiased">
 
     <!-- Simple Navigation -->
@@ -203,9 +711,15 @@
             <div class="flex items-center gap-2">
                 <span class="font-hand text-3xl text-primary font-bold">PixyDelta</span>
             </div>
-            <a href="https://wa.me/917432895514?text=Hi%20Safikul!%20I%20want%20to%20know%20more%20about%20the%20coding%20classes." class="bg-primary text-white px-5 py-2 rounded-lg font-semibold hover:bg-blue-700 transition text-sm md:text-base cta-button">
-                Talk to Safikul
-            </a>
+            <div class="flex items-center gap-2">
+                <button id="themeToggle" type="button" class="theme-toggle" aria-label="Switch to dark theme"
+                    title="Toggle dark theme">
+                    <i id="themeIcon" class="fa-solid fa-moon"></i>
+                </button>
+                <!--<a href="https://wa.me/917432895514?text=Hi%20Safikul!%20I%20want%20to%20know%20more%20about%20the%20coding%20classes." class="bg-primary text-white px-5 py-2 rounded-lg font-semibold hover:bg-blue-700 transition text-sm md:text-base cta-button">
+                    See If PixyDelta Fits My Child
+                </a>-->
+            </div>
         </div>
     </nav>
 
@@ -219,19 +733,28 @@
                     <span class="hand-underline">Give them the confidence to build in it.</span>
                 </h1>
                 <p class="text-lg text-muted mb-5 leading-relaxed">
-                    As parents, we don't just want our children to pass the next exam. We want them to grow into curious, confident people who can understand technology instead of only consuming it. I'm a software developer based here in Cooch Behar, and I'll help your child learn by building real games, apps, Python programs, and AI projects — one small achievement at a time.
+                    As parents, we don't just want our children to pass the next exam. We want them to grow into
+                    curious, confident people who can understand technology instead of only consuming it. I'm a software
+                    developer based here in Cooch Behar, and I'll help your child learn by <strong
+                        class="text-ink">writing real Python, solving problems, exploring how AI works, and building
+                        projects they can proudly explain</strong> — one small achievement at a time.
                 </p>
                 <div class="flex flex-wrap gap-x-5 gap-y-2 mb-8 text-sm text-gray-700">
-                    <span class="inline-flex items-center gap-2"><i class="fa-solid fa-brain text-primary"></i><strong>5 years building AI applications</strong></span>
-                    <span class="inline-flex items-center gap-2"><i class="fa-solid fa-laptop-code text-accent"></i>Working software developer</span>
-                    <span class="inline-flex items-center gap-2"><i class="fa-solid fa-location-dot text-green-600"></i>Local mentor in Cooch Behar</span>
+                    <span class="inline-flex items-center gap-2"><i class="fa-solid fa-brain text-primary"></i><strong>5
+                            years building AI applications</strong></span>
+                    <span class="inline-flex items-center gap-2"><i
+                            class="fa-solid fa-laptop-code text-accent"></i>Working software developer</span>
+                    <span class="inline-flex items-center gap-2"><i
+                            class="fa-solid fa-location-dot text-green-600"></i>Local mentor in Cooch Behar</span>
                 </div>
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="https://wa.me/917432895514?text=Hi%20Safikul!%20I%20want%20to%20book%20a%20free%20demo%20class." class="bg-primary text-white px-8 py-4 rounded-lg font-bold hover:bg-blue-700 transition text-center cta-button">
-                        Book a Free Demo Class
+                    <a href="#curriculum"
+                        class="bg-primary text-white px-8 py-4 rounded-lg font-bold hover:bg-blue-700 transition text-center cta-button">
+                        Explore the 12-Week Journey
                     </a>
-                    <a href="#curriculum" class="border-2 border-gray-300 px-8 py-4 rounded-lg font-bold hover:border-primary hover:text-primary transition text-center cta-button">
-                        See What We'll Build
+                    <a href="#why-python"
+                        class="border-2 border-gray-300 px-8 py-4 rounded-lg font-bold hover:border-primary hover:text-primary transition text-center cta-button">
+                        Why Python First?
                     </a>
                 </div>
             </div>
@@ -245,16 +768,19 @@
                         <span class="ml-2 text-xs text-muted font-mono">first_project.py</span>
                     </div>
                     <div class="font-mono text-sm space-y-1">
-                        <p><span class="text-purple-600">def</span> <span class="text-primary">say_hello</span>(name):</p>
-                        <p class="pl-4"><span class="text-purple-600">return</span> <span class="text-green-600">f"Hello, {name}!"</span></p>
+                        <p><span class="text-purple-600">def</span> <span class="text-primary">say_hello</span>(name):
+                        </p>
+                        <p class="pl-4"><span class="text-purple-600">return</span> <span
+                                class="text-green-600">f"Hello, {name}!"</span></p>
                         <p class="mt-3 text-muted"># My first program!</p>
                         <p class="text-primary">print(say_hello("Cooch Behar"))</p>
                         <p class="text-green-600 mt-2 cursor-blink">→ Hello, Cooch Behar!</p>
                     </div>
                 </div>
                 <!-- Handwritten note -->
-                <div class="absolute -bottom-6 -left-6 bg-accent/10 border-2 border-accent rounded-lg p-3 tilt-left tape week-note">
-                    <p class="font-hand text-xl text-ink">Week 1: First program! 🎉</p>
+                <div
+                    class="absolute -bottom-6 -left-6 bg-accent/10 border-2 border-accent rounded-lg p-3 tilt-left tape week-note">
+                    <p class="font-hand text-xl text-ink">Week 1: Real Python! 🐍</p>
                 </div>
             </div>
         </div>
@@ -268,25 +794,96 @@
             </h2>
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="text-center feature-card reveal">
-                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 feature-icon">
+                    <div
+                        class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 feature-icon">
                         <i class="fa-solid fa-laptop-code text-primary text-2xl"></i>
                     </div>
                     <h3 class="font-bold text-xl mb-2">Real Projects</h3>
-                    <p class="text-muted">Less passive screen time, more purposeful creation. Your child builds games, Python programs, and guided AI experiments they can explain and show you.</p>
+                    <p class="text-muted">From the first weekend, your child writes Python, solves small problems, tests
+                        ideas, and builds programs they can proudly explain at home.</p>
                 </div>
                 <div class="text-center feature-card reveal">
-                    <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4 feature-icon">
+                    <div
+                        class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4 feature-icon">
                         <i class="fa-solid fa-user-tie text-accent text-2xl"></i>
                     </div>
                     <h3 class="font-bold text-xl mb-2">Learn From a Builder</h3>
-                    <p class="text-muted">Your child learns from a working software developer with 5 years of hands-on AI application-building experience — with concepts translated into projects suitable for their age.</p>
+                    <p class="text-muted">Your child learns from a working software developer with hands-on AI
+                        application experience — with difficult ideas made understandable without watering them down.
+                    </p>
                 </div>
                 <div class="text-center feature-card reveal">
-                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 feature-icon">
-                        <i class="fa-solid fa-users text-green-600 text-2xl"></i>
+                    <div
+                        class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 feature-icon">
+                        <i class="fa-solid fa-magnifying-glass text-green-600 text-2xl"></i>
                     </div>
-                    <h3 class="font-bold text-xl mb-2">Small Batches</h3>
-                    <p class="text-muted">Only 15 students per batch. I know every child's name, their strengths, and where they need help.</p>
+                    <h3 class="font-bold text-xl mb-2">Think, Debug, Explain</h3>
+                    <p class="text-muted">Students predict what their code should do, investigate why it fails, test a
+                        fix, and explain the reasoning — instead of simply copying a finished solution.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Why Python for Kids -->
+    <section class="bg-white border-y border-gray-200 py-16" id="why-python">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-10 md:gap-14 items-center">
+                <div class="reveal">
+                    <p class="font-hand text-2xl text-accent mb-2">Why Python for your child?</p>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-5">A real programming language that helps children
+                        <span class="text-primary">think clearly and build confidently.</span>
+                    </h2>
+                    <p class="text-muted leading-relaxed mb-4">Python is beginner-friendly without being a toy language.
+                        Children can start with simple programs, then keep using the same language as they grow into
+                        data, automation, and AI projects.</p>
+                    <p class="text-muted leading-relaxed mb-6">That means less time switching between learning
+                        environments, and more time developing the habits that matter: breaking problems into steps,
+                        testing ideas, finding bugs, and improving their work.</p>
+                    <div class="bg-blue-50 border border-blue-100 rounded-xl p-4">
+                        <p class="text-sm"><span class="font-semibold text-ink">What a parent sees:</span> your child
+                            moves from “What do I click?” to “What should the program do, and how can I make it work?”
+                        </p>
+                    </div>
+                </div>
+                <div class="grid sm:grid-cols-2 gap-4 reveal reveal-delay-1">
+                    <div class="feature-card bg-paper border border-gray-200 rounded-2xl p-5">
+                        <div
+                            class="w-11 h-11 rounded-xl bg-blue-50 text-primary flex items-center justify-center mb-4 feature-icon">
+                            <i class="fa-solid fa-seedling"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Easy to start</h3>
+                        <p class="text-sm text-muted">Readable code lets beginners focus on logic and ideas before
+                            worrying about too much syntax.</p>
+                    </div>
+                    <div class="feature-card bg-paper border border-gray-200 rounded-2xl p-5">
+                        <div
+                            class="w-11 h-11 rounded-xl bg-amber-50 text-accent flex items-center justify-center mb-4 feature-icon">
+                            <i class="fa-solid fa-stairs"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Room to grow</h3>
+                        <p class="text-sm text-muted">The same language can take them from first programs to data work,
+                            automation, and AI.</p>
+                    </div>
+                    <div class="feature-card bg-paper border border-gray-200 rounded-2xl p-5">
+                        <div
+                            class="w-11 h-11 rounded-xl bg-green-50 text-green-600 flex items-center justify-center mb-4 feature-icon">
+                            <i class="fa-solid fa-bug-slash"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Learn to debug</h3>
+                        <p class="text-sm text-muted">Children learn to read errors, form a hypothesis, test one change,
+                            and explain what happened.</p>
+                    </div>
+                    <div class="feature-card bg-paper border border-gray-200 rounded-2xl p-5">
+                        <div
+                            class="w-11 h-11 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center mb-4 feature-icon">
+                            <i class="fa-solid fa-robot"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">A natural path into AI</h3>
+                        <p class="text-sm text-muted">Because Python is widely used in data and AI, students can connect
+                            coding foundations directly to later AI projects.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -297,99 +894,137 @@
         <div class="reveal text-center">
             <p class="font-hand text-2xl text-accent mb-2">Curious → Capable → Confident</p>
             <h2 class="text-3xl md:text-4xl font-bold mb-4">
-                12 Weeks. From Screen User to <span class="hand-underline">Confident Creator.</span>
+                12 Weeks. One Clear Journey From <span class="hand-underline">Python to AI to Creation.</span>
             </h2>
-            <p class="text-center text-muted mb-5 max-w-2xl mx-auto">
-                A practical progression from creative coding to real Python and then guided AI projects — designed so parents can see not only what their child learned, but what they can actually make and explain.
+            <p class="text-center text-muted mb-6 max-w-3xl mx-auto">
+                No Scratch detour. Students begin with real Python, learn to think with data, explore how AI works and
+                fails, then spend three full weeks building and presenting a capstone project.
             </p>
-            <div class="inline-flex flex-wrap justify-center gap-2 mb-12 text-sm">
-                <span class="bg-amber-50 border border-amber-100 px-3 py-1.5 rounded-full"><strong>1.</strong> Imagine it</span>
-                <span class="bg-blue-50 border border-blue-100 px-3 py-1.5 rounded-full"><strong>2.</strong> Code it</span>
-                <span class="bg-green-50 border border-green-100 px-3 py-1.5 rounded-full"><strong>3.</strong> Build with AI</span>
+            <div class="flex flex-wrap justify-center gap-2 mb-12">
+                <span class="phase-pill text-blue-700"><i class="fa-brands fa-python"></i> 5 Weeks Python</span>
+                <span class="phase-pill text-green-700"><i class="fa-solid fa-brain"></i> 4 Weeks AI</span>
+                <span class="phase-pill text-amber-700"><i class="fa-solid fa-rocket"></i> 3 Weeks Capstone</span>
             </div>
         </div>
 
         <div class="space-y-5 relative">
-            <!-- Stage 1 -->
-            <div class="journey-card bg-white rounded-2xl shadow-md p-6 md:p-8 border border-gray-100 border-l-4 border-l-accent project-card reveal text-amber-600">
-                <div class="flex flex-col md:flex-row items-start gap-5 md:gap-7">
-                    <div class="journey-visual bg-amber-50 text-accent mx-auto md:mx-0" aria-hidden="true">
-                        <i class="fa-solid fa-gamepad main-icon"></i>
-                        <span class="mini-chip one text-amber-700">idea</span>
-                        <span class="mini-chip two text-amber-700"><i class="fa-solid fa-play mr-1"></i>play</span>
-                    </div>
-                    <div class="flex-1 text-ink">
-                        <div class="flex flex-wrap items-center gap-x-3 gap-y-1 mb-2">
-                            <span class="font-hand text-2xl text-accent font-bold">01</span>
-                            <h3 class="text-xl md:text-2xl font-bold">Spark Their Curiosity</h3>
-                            <span class="text-sm text-muted">Weeks 1–4 · Scratch & Creative Coding</span>
-                        </div>
-                        <p class="text-muted mb-4 leading-relaxed">Instead of only playing games, your child discovers how games are made. They use logic, sequences, loops, and creativity to turn their own ideas into playable projects.</p>
-                        <div class="bg-amber-50 rounded-xl px-4 py-3 mb-4 border border-amber-100">
-                            <p class="text-sm"><span class="font-semibold text-ink">What a parent sees:</span> “I made this!” — the first shift from consuming a screen to creating something on it.</p>
-                        </div>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Logical Thinking</span>
-                            <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Creativity</span>
-                            <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Playable Projects</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="flex justify-center reveal journey-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-down text-gray-300 text-xl"></i></div>
-
-            <!-- Stage 2 -->
-            <div class="journey-card bg-white rounded-2xl shadow-md p-6 md:p-8 border border-gray-100 border-l-4 border-l-primary project-card reveal text-blue-600">
+            <div
+                class="journey-card bg-white rounded-2xl shadow-md p-6 md:p-8 border border-gray-100 border-l-4 border-l-primary project-card reveal text-blue-600">
                 <div class="flex flex-col md:flex-row items-start gap-5 md:gap-7">
                     <div class="journey-visual bg-blue-50 text-primary mx-auto md:mx-0" aria-hidden="true">
-                        <i class="fa-solid fa-code main-icon"></i>
-                        <span class="mini-chip one text-blue-700">Python</span>
-                        <span class="mini-chip two text-blue-700">&lt;/&gt;</span>
+                        <i class="fa-brands fa-python main-icon"></i>
+                        <span class="mini-chip one text-blue-700">code</span>
+                        <span class="mini-chip two text-blue-700">debug</span>
                     </div>
                     <div class="flex-1 text-ink">
                         <div class="flex flex-wrap items-center gap-x-3 gap-y-1 mb-2">
-                            <span class="font-hand text-2xl text-primary font-bold">02</span>
-                            <h3 class="text-xl md:text-2xl font-bold">Build Real Problem-Solving Skills</h3>
-                            <span class="text-sm text-muted">Weeks 5–8 · Python Programming</span>
+                            <span class="font-hand text-2xl text-primary font-bold">01</span>
+                            <h3 class="text-xl md:text-2xl font-bold">Learn to Think in Python</h3>
+                            <span class="text-sm text-muted">Weeks 1–5 · Python & Software Thinking</span>
                         </div>
-                        <p class="text-muted mb-4 leading-relaxed">They move from visual blocks to writing real Python. When code doesn't work, they learn to inspect the problem, try again, and improve it — developing patience and structured problem-solving alongside programming.</p>
-                        <div class="bg-blue-50 rounded-xl px-4 py-3 mb-4 border border-blue-100">
-                            <p class="text-sm"><span class="font-semibold text-ink">What a parent sees:</span> Your child begins explaining <em>why</em> something works, not just clicking until it does.</p>
+                        <p class="text-muted mb-4 leading-relaxed">Students start coding from Week 1 — input, variables,
+                            decisions, loops, functions, lists, testing and debugging. The goal is not memorising
+                            syntax; it is learning how to turn a problem into working logic.</p>
+                        <div class="phase-stack text-primary mb-4" aria-label="Weeks 1 to 5 progression">
+                            <div class="stack-step"><span class="step-no">1</span><span class="pill-copy"><strong>Week
+                                        1</strong><span>Give Python instructions → capture input</span></span></div>
+                            <div class="stack-step offset"><span class="step-no">2</span><span
+                                    class="pill-copy"><strong>Week 2</strong><span>Turn inputs into decisions → handle
+                                        mistakes</span></span></div>
+                            <div class="stack-step"><span class="step-no">3</span><span class="pill-copy"><strong>Week
+                                        3</strong><span>Make logic repeat → count, simulate & search</span></span></div>
+                            <div class="stack-step offset"><span class="step-no">4</span><span
+                                    class="pill-copy"><strong>Week 4</strong><span>Break bigger problems into reusable
+                                        functions</span></span></div>
+                            <div class="stack-step"><span class="step-no">5</span><span class="pill-copy"><strong>Week
+                                        5</strong><span>Work with collections → build the Python
+                                        checkpoint</span></span></div>
                         </div>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Problem Solving</span>
-                            <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Real Python</span>
-                            <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Debugging Mindset</span>
+                        <div class="bg-blue-50 rounded-xl px-4 py-3 border border-blue-100">
+                            <p class="text-sm"><span class="font-semibold text-ink">What a parent sees:</span> Your
+                                child stops saying “it doesn't work” and starts saying, “I think the problem is here
+                                because…”</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="flex justify-center reveal journey-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-down text-gray-300 text-xl"></i></div>
+            <div class="flex justify-center reveal journey-arrow" aria-hidden="true"><i
+                    class="fa-solid fa-arrow-down text-gray-300 text-xl"></i></div>
 
-            <!-- Stage 3 -->
-            <div class="journey-card bg-white rounded-2xl shadow-md p-6 md:p-8 border border-gray-100 border-l-4 border-l-green-500 project-card reveal text-green-600">
+            <div
+                class="journey-card bg-white rounded-2xl shadow-md p-6 md:p-8 border border-gray-100 border-l-4 border-l-green-500 project-card reveal text-green-600">
                 <div class="flex flex-col md:flex-row items-start gap-5 md:gap-7">
                     <div class="journey-visual bg-green-50 text-green-600 mx-auto md:mx-0" aria-hidden="true">
-                        <i class="fa-solid fa-wand-magic-sparkles main-icon"></i>
-                        <span class="mini-chip one text-green-700">AI</span>
-                        <span class="mini-chip two text-green-700"><i class="fa-solid fa-robot"></i></span>
+                        <i class="fa-solid fa-brain main-icon"></i>
+                        <span class="mini-chip one text-green-700">data</span>
+                        <span class="mini-chip two text-green-700">AI</span>
                     </div>
                     <div class="flex-1 text-ink">
                         <div class="flex flex-wrap items-center gap-x-3 gap-y-1 mb-2">
-                            <span class="font-hand text-2xl text-green-600 font-bold">03</span>
-                            <h3 class="text-xl md:text-2xl font-bold">Learn to Build With AI — Not Just Ask It Questions</h3>
-                            <span class="text-sm text-muted">Weeks 9–12 · AI Literacy & Final Project</span>
+                            <span class="font-hand text-2xl text-green-600 font-bold">02</span>
+                            <h3 class="text-xl md:text-2xl font-bold">Understand AI Instead of Just Using It</h3>
+                            <span class="text-sm text-muted">Weeks 6–9 · AI & Data Literacy</span>
                         </div>
-                        <p class="text-muted mb-4 leading-relaxed">AI becomes something they can explore thoughtfully rather than a mysterious answer box. With guidance, they experiment with AI tools and simple models, discuss where AI can make mistakes, and use it as part of a project they understand.</p>
-                        <div class="bg-green-50 rounded-xl px-4 py-3 mb-4 border border-green-100">
-                            <p class="text-sm"><span class="font-semibold text-ink">What a parent sees:</span> Your child can talk about AI with curiosity and judgment — and show how they used it to create, not simply copy an answer.</p>
+                        <p class="text-muted mb-4 leading-relaxed">Students learn examples, features, labels and
+                            classification; train a tiny model; deliberately make it fail with weak data; then explore
+                            generative AI, hallucinations, prompting and verification.</p>
+                        <div class="phase-stack green text-green-600 mb-4" aria-label="Weeks 6 to 9 progression">
+                            <div class="stack-step"><span class="step-no">6</span><span class="pill-copy"><strong>Week
+                                        6</strong><span>Move from coded rules → examples, features &
+                                        labels</span></span></div>
+                            <div class="stack-step offset"><span class="step-no">7</span><span
+                                    class="pill-copy"><strong>Week 7</strong><span>Turn examples into a model → train &
+                                        test</span></span></div>
+                            <div class="stack-step"><span class="step-no">8</span><span class="pill-copy"><strong>Week
+                                        8</strong><span>Study failures → improve data & judgment</span></span></div>
+                            <div class="stack-step offset"><span class="step-no">9</span><span
+                                    class="pill-copy"><strong>Week 9</strong><span>Use generative AI → prompt, verify &
+                                        improve</span></span></div>
                         </div>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">AI Literacy</span>
-                            <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Responsible Use</span>
-                            <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Final Project</span>
+                        <div class="bg-green-50 rounded-xl px-4 py-3 border border-green-100">
+                            <p class="text-sm"><span class="font-semibold text-ink">What a parent sees:</span> Your
+                                child can explain why AI can be useful <em>and</em> wrong — and why checking the result
+                                matters.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex justify-center reveal journey-arrow" aria-hidden="true"><i
+                    class="fa-solid fa-arrow-down text-gray-300 text-xl"></i></div>
+
+            <div
+                class="journey-card bg-white rounded-2xl shadow-md p-6 md:p-8 border border-gray-100 border-l-4 border-l-accent project-card reveal text-amber-600">
+                <div class="flex flex-col md:flex-row items-start gap-5 md:gap-7">
+                    <div class="journey-visual bg-amber-50 text-accent mx-auto md:mx-0" aria-hidden="true">
+                        <i class="fa-solid fa-rocket main-icon"></i>
+                        <span class="mini-chip one text-amber-700">MVP</span>
+                        <span class="mini-chip two text-amber-700">demo</span>
+                    </div>
+                    <div class="flex-1 text-ink">
+                        <div class="flex flex-wrap items-center gap-x-3 gap-y-1 mb-2">
+                            <span class="font-hand text-2xl text-accent font-bold">03</span>
+                            <h3 class="text-xl md:text-2xl font-bold">Build Something for a Real Person</h3>
+                            <span class="text-sm text-muted">Weeks 10–12 · Capstone</span>
+                        </div>
+                        <p class="text-muted mb-4 leading-relaxed">For the final three weeks, students choose a user and
+                            a real problem, scope a small solution, build a working prototype, test it with another
+                            person, fix bugs and present it on Demo Day.</p>
+                        <div class="phase-stack amber text-amber-600 mb-4" aria-label="Weeks 10 to 12 progression">
+                            <div class="stack-step"><span class="step-no">10</span><span class="pill-copy"><strong>Week
+                                        10</strong><span>Start with a user problem → scope the MVP</span></span></div>
+                            <div class="stack-step offset"><span class="step-no">11</span><span
+                                    class="pill-copy"><strong>Week 11</strong><span>Turn the plan into a working
+                                        end-to-end prototype</span></span></div>
+                            <div class="stack-step"><span class="step-no">12</span><span class="pill-copy"><strong>Week
+                                        12</strong><span>Test with users → refine → explain on Demo Day</span></span>
+                            </div>
+                        </div>
+                        <div class="bg-amber-50 rounded-xl px-4 py-3 border border-amber-100">
+                            <p class="text-sm"><span class="font-semibold text-ink">What a parent sees:</span> Not a
+                                certificate-only ending — a project your child can demonstrate, defend and explain in
+                                their own words.</p>
                         </div>
                     </div>
                 </div>
@@ -398,9 +1033,49 @@
 
         <div class="mt-12 bg-white border border-gray-200 rounded-2xl shadow-sm p-7 md:p-10 text-center reveal">
             <p class="font-hand text-2xl text-primary mb-3">The moment that matters</p>
-            <h3 class="text-2xl md:text-3xl font-bold mb-3">At the end of 12 weeks, don't just ask, “What did you learn?”</h3>
-            <p class="text-xl md:text-2xl text-muted mb-3">Ask them, <span class="font-bold text-ink">“What did you build?”</span></p>
-            <p class="text-muted max-w-2xl mx-auto">And let them show you — a game they designed, a Python program they wrote, or an AI-assisted project they can explain in their own words.</p>
+            <h3 class="text-2xl md:text-3xl font-bold mb-3">At the end of 12 weeks, ask more than “What did you learn?”
+            </h3>
+            <p class="text-xl md:text-2xl text-muted mb-3">Ask, <span class="font-bold text-ink">“Show me what you built
+                    — and explain how it works.”</span></p>
+            <p class="text-muted max-w-2xl mx-auto">That ability to explain is part of the PixyDelta journey. Building,
+                debugging and understanding matter more than simply producing an impressive-looking screen.</p>
+        </div>
+    </section>
+
+    <!-- Parent + Student Outcomes -->
+    <section class="bg-white border-y border-gray-200 py-16">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="text-center reveal mb-10">
+                <p class="font-hand text-2xl text-accent mb-2">What changes over 12 weeks?</p>
+                <h2 class="text-3xl md:text-4xl font-bold">Skills parents can notice. Projects kids can feel proud of.
+                </h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="proof-card border border-gray-200 rounded-2xl p-5 bg-paper reveal">
+                    <i class="fa-solid fa-puzzle-piece text-primary text-2xl mb-3"></i>
+                    <h3 class="font-bold mb-2">Break Problems Down</h3>
+                    <p class="text-sm text-muted">Instead of freezing at a big task, students learn to split it into
+                        smaller, testable steps.</p>
+                </div>
+                <div class="proof-card border border-gray-200 rounded-2xl p-5 bg-paper reveal">
+                    <i class="fa-solid fa-bug text-accent text-2xl mb-3"></i>
+                    <h3 class="font-bold mb-2">Debug With Evidence</h3>
+                    <p class="text-sm text-muted">They learn to predict, test one thing, inspect results and explain
+                        what changed.</p>
+                </div>
+                <div class="proof-card border border-gray-200 rounded-2xl p-5 bg-paper reveal">
+                    <i class="fa-solid fa-shield-halved text-green-600 text-2xl mb-3"></i>
+                    <h3 class="font-bold mb-2">Question AI Outputs</h3>
+                    <p class="text-sm text-muted">Students practise checking claims and understanding that confident AI
+                        can still be wrong.</p>
+                </div>
+                <div class="proof-card border border-gray-200 rounded-2xl p-5 bg-paper reveal">
+                    <i class="fa-solid fa-person-chalkboard text-purple-600 text-2xl mb-3"></i>
+                    <h3 class="font-bold mb-2">Explain Their Work</h3>
+                    <p class="text-sm text-muted">A finished project counts more when the child can describe the logic,
+                        bugs, fixes and decisions behind it.</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -410,29 +1085,40 @@
             <div class="grid md:grid-cols-2 gap-10 md:gap-14 items-center">
                 <div class="reveal">
                     <p class="font-hand text-2xl text-primary mb-2">AI is already part of their world</p>
-                    <h2 class="text-3xl md:text-4xl font-bold mb-5">The goal isn't to make children depend on AI. <span class="text-primary">It's to help them understand it.</span></h2>
-                    <p class="text-muted leading-relaxed mb-4">Children are growing up with AI tools around them. At PixyDelta, we introduce AI as something to question, test, and create with. They learn that AI can be useful, but it can also be wrong — so their own thinking still matters.</p>
-                    <p class="text-muted leading-relaxed mb-6">This part of the program comes from my own hands-on experience: I've spent about <strong class="text-ink">5 years building AI applications</strong>. I use that practical background to choose approachable examples, explain what is happening behind the tool, and keep the focus on understanding rather than hype.</p>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-5">The goal isn't to make children depend on AI. <span
+                            class="text-primary">It's to make them harder to fool by it.</span></h2>
+                    <p class="text-muted leading-relaxed mb-4">Students first learn how AI systems use examples and
+                        data, then train a tiny model and deliberately make it fail. Only after that do we move to
+                        generative AI — where they learn prompting, hallucinations, verification, and responsible use.
+                    </p>
+                    <p class="text-muted leading-relaxed mb-6">This part of the journey comes from my own hands-on
+                        experience: I've spent about <strong class="text-ink">5 years building AI applications</strong>.
+                        I use that practical background to choose approachable examples, explain what is happening
+                        behind the tool, and keep the focus on understanding rather than hype.</p>
                     <div class="grid sm:grid-cols-2 gap-3">
                         <div class="bg-white border border-blue-100 rounded-xl p-4">
                             <i class="fa-solid fa-brain text-primary mb-2"></i>
                             <p class="font-semibold mb-1">Think before trusting</p>
-                            <p class="text-sm text-muted">Learn to question outputs instead of accepting every AI answer.</p>
+                            <p class="text-sm text-muted">Learn to question outputs instead of accepting every AI
+                                answer.</p>
                         </div>
                         <div class="bg-white border border-blue-100 rounded-xl p-4">
                             <i class="fa-solid fa-lightbulb text-accent mb-2"></i>
                             <p class="font-semibold mb-1">Use AI to create</p>
-                            <p class="text-sm text-muted">Explore ideas and projects while keeping the child in control of the thinking.</p>
+                            <p class="text-sm text-muted">Explore ideas and projects while keeping the child in control
+                                of the thinking.</p>
                         </div>
                         <div class="bg-white border border-blue-100 rounded-xl p-4">
                             <i class="fa-solid fa-shield-halved text-green-600 mb-2"></i>
                             <p class="font-semibold mb-1">Use it responsibly</p>
-                            <p class="text-sm text-muted">Discuss sensible boundaries, mistakes, and why human judgment matters.</p>
+                            <p class="text-sm text-muted">Discuss sensible boundaries, mistakes, and why human judgment
+                                matters.</p>
                         </div>
                         <div class="bg-white border border-blue-100 rounded-xl p-4">
                             <i class="fa-solid fa-comments text-purple-600 mb-2"></i>
                             <p class="font-semibold mb-1">Explain what they made</p>
-                            <p class="text-sm text-muted">A project matters more when a child can explain the idea behind it.</p>
+                            <p class="text-sm text-muted">A project matters more when a child can explain the idea
+                                behind it.</p>
                         </div>
                     </div>
                 </div>
@@ -444,11 +1130,18 @@
                         <div class="orbit-dot c"><i class="fa-solid fa-shield-halved"></i></div>
                     </div>
                     <div class="bg-white rounded-2xl border border-blue-100 shadow-sm p-6 mt-3">
-                        <p class="text-sm uppercase tracking-wider text-primary font-semibold mb-3">A healthier AI habit</p>
+                        <p class="text-sm uppercase tracking-wider text-primary font-semibold mb-3">A healthier AI habit
+                        </p>
                         <div class="space-y-3 text-sm">
-                            <p><span class="inline-flex w-7 h-7 rounded-full bg-blue-50 text-primary items-center justify-center mr-2 font-bold">1</span> Think of the problem first.</p>
-                            <p><span class="inline-flex w-7 h-7 rounded-full bg-blue-50 text-primary items-center justify-center mr-2 font-bold">2</span> Use AI as a tool to explore.</p>
-                            <p><span class="inline-flex w-7 h-7 rounded-full bg-blue-50 text-primary items-center justify-center mr-2 font-bold">3</span> Check, improve, and explain the result.</p>
+                            <p><span
+                                    class="inline-flex w-7 h-7 rounded-full bg-blue-50 text-primary items-center justify-center mr-2 font-bold">1</span>
+                                Think before asking AI.</p>
+                            <p><span
+                                    class="inline-flex w-7 h-7 rounded-full bg-blue-50 text-primary items-center justify-center mr-2 font-bold">2</span>
+                                Ask with a clear goal and context.</p>
+                            <p><span
+                                    class="inline-flex w-7 h-7 rounded-full bg-blue-50 text-primary items-center justify-center mr-2 font-bold">3</span>
+                                Check, improve, and explain the result yourself.</p>
                         </div>
                     </div>
                 </div>
@@ -466,13 +1159,22 @@
                         Your child learns AI from someone who <span class="text-primary">actually builds with it.</span>
                     </h2>
                     <p class="text-muted mb-4 leading-relaxed">
-                        My name is Safikul. I'm a software developer based here in Cooch Behar, with about <strong class="text-ink">5 years of experience building AI applications</strong>. My work has given me practical experience with how software and AI are used to turn ideas into working applications.
+                        My name is Safikul. I'm a software developer based here in Cooch Behar, with about <strong
+                            class="text-ink">5 years of experience building AI applications</strong>. My work has given
+                        me practical experience with how software and AI are used to turn ideas into working
+                        applications.
                     </p>
                     <p class="text-muted mb-4 leading-relaxed">
-                        PixyDelta is my way of bringing that practical experience into a learning environment for children — without overwhelming them with professional jargon. We start with creativity and logic, move into real programming, and introduce AI through guided, age-appropriate projects.
+                        PixyDelta is my way of bringing that practical experience into a learning environment for
+                        children — without overwhelming them with professional jargon. We start directly with Python,
+                        build strong programming and debugging habits, then move into data, AI experiments, and a
+                        three-week capstone project.
                     </p>
                     <p class="text-muted leading-relaxed">
-                        I teach the way I wish I had been taught — by building real things, making mistakes, asking why something works, and learning by doing. The goal isn't to turn a child into an AI expert in 12 weeks. It's to give them a strong first experience of creating with technology, guided by someone who works with it professionally.
+                        I teach the way I wish I had been taught — by building real things, making mistakes, asking why
+                        something works, and learning by doing. The goal isn't to turn a child into an AI expert in 12
+                        weeks. It's to give them a genuine foundation in programming, AI literacy and independent
+                        building — guided by someone who works with these technologies professionally.
                     </p>
                 </div>
             </div>
@@ -505,28 +1207,40 @@
                 </div>
                 <div>
                     <p class="text-sm text-muted mb-1">Requirement</p>
-                    <p class="font-semibold">Bring your own laptop or tablet</p>
+                    <p class="font-semibold">Bring your own laptop</p>
                 </div>
-                <div>
+                <!--<div>
                     <p class="text-sm text-muted mb-1">Batch size</p>
                     <p class="font-semibold">Maximum 15 students</p>
+                </div>-->
+                <div>
+                    <p class="text-sm text-muted mb-1">Journey structure</p>
+                    <p class="font-semibold">5 weeks Python · 4 weeks AI · 3 weeks Capstone</p>
+                </div>
+                <div>
+                    <p class="text-sm text-muted mb-1">Final outcome</p>
+                    <p class="font-semibold">Working project + Demo Day</p>
                 </div>
             </div>
 
             <div class="border-t border-gray-200 pt-8 text-center">
-                <p class="font-hand text-2xl text-accent mb-2">Their future won't be built from textbooks alone.</p>
-                <p class="text-muted mb-6 max-w-xl mx-auto leading-relaxed">Give your child a place to experiment, make mistakes, solve problems, and discover the feeling of saying, <strong class="text-ink">“I built this myself.”</strong> That confidence can stay with them far beyond these 12 weeks.</p>
+                <p class="font-hand text-2xl text-accent mb-2">Confidence grows when a child can say, “I figured it
+                    out.”</p>
+                <p class="text-muted mb-6 max-w-xl mx-auto leading-relaxed">Give your child a place to write real code,
+                    make mistakes safely, question AI outputs, and build something of their own. By Demo Day, they
+                    should be able to say, <strong class="text-ink">“I built this — and I can explain it.”</strong></p>
 
-                <a href="https://wa.me/917432895514?text=Hi%20Safikul!%20I%20want%20to%20book%20a%20free%20demo%20class%20for%20my%20child." class="inline-block bg-primary text-white px-10 py-4 rounded-lg font-bold hover:bg-blue-700 transition text-lg cta-button">
-                    Let My Child Try a Free Class
+                <a href="#curriculum"
+                    class="inline-block bg-primary text-white px-10 py-4 rounded-lg font-bold hover:bg-blue-700 transition text-lg cta-button">
+                    Review the Learning Journey
                 </a>
-                <p class="text-sm text-muted mt-4">Small batch of 15 students so every child gets attention and room to ask questions.</p>
+                <!--<p class="text-sm text-muted mt-4">Small batch of 15 students so every child gets attention and room to ask questions.</p>-->
             </div>
         </div>
     </section>
 
     <!-- Final CTA -->
-    <section class="bg-primary text-white py-16">
+    <!--<section class="bg-primary text-white py-16">
         <div class="max-w-3xl mx-auto px-4 text-center reveal">
             <h2 class="text-3xl md:text-4xl font-bold mb-4">
                 What will your child create when they're given the chance?
@@ -534,29 +1248,47 @@
             <p class="text-lg mb-8 opacity-90">
                 Start with a free demo class. Your child gets to build something, ask questions, and experience the teaching style — while you can decide whether PixyDelta feels like the right place for them.
             </p>
-            <a href="https://wa.me/917432895514?text=Hi%20Safikul!%20I%20want%20to%20book%20a%20free%20demo%20class." class="inline-block bg-white text-primary px-10 py-4 rounded-lg font-bold hover:bg-gray-100 transition text-lg cta-button">
-                Give My Child a Chance to Build
-            </a>
         </div>
-    </section>
+    </section>-->
 
     <!-- Footer -->
     <footer class="bg-ink text-gray-400 py-8">
         <div class="max-w-5xl mx-auto px-4 text-center">
             <p class="font-hand text-2xl text-white mb-2">PixyDelta</p>
-            <p class="text-sm mb-4">Transforming screen time into future skills.</p>
-            <p class="text-xs">
-                © 2024 PixyDelta | <a href="mailto:hello@pixydelta.com" class="hover:text-white transition">hello@pixydelta.com</a>
-            </p>
+            <p class="text-sm mb-4">From screen user to confident creator.</p>
+            <p class="text-xs">© 2026 PixyDelta</p>
         </div>
     </footer>
-
     <!-- Floating WhatsApp -->
-    <a href="https://wa.me/917432895514?text=Hi%20Safikul!" class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition z-50 whatsapp-float">
+    <a href="https://wa.me/917432895514?text=Hi%20Safikul!" aria-label="Chat with Safikul on WhatsApp"
+        class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition z-50 whatsapp-float">
         <i class="fa-brands fa-whatsapp text-2xl"></i>
     </a>
 
     <script>
+
+        // Light / dark theme toggle. Remember the visitor's choice.
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        const savedTheme = localStorage.getItem('pixydelta-theme');
+        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        function applyTheme(theme) {
+            const dark = theme === 'dark';
+            document.documentElement.classList.toggle('dark', dark);
+            themeIcon.className = dark ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+            themeToggle.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
+            themeToggle.setAttribute('title', dark ? 'Switch to light theme' : 'Switch to dark theme');
+        }
+
+        applyTheme(savedTheme || (prefersDark ? 'dark' : 'light'));
+
+        themeToggle.addEventListener('click', () => {
+            const next = document.documentElement.classList.contains('dark') ? 'light' : 'dark';
+            localStorage.setItem('pixydelta-theme', next);
+            applyTheme(next);
+        });
+
         // Reveal sections as they enter the viewport; no dependency required.
         const revealItems = document.querySelectorAll('.reveal');
         if ('IntersectionObserver' in window) {
@@ -575,4 +1307,5 @@
     </script>
 
 </body>
+
 </html>
