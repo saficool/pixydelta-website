@@ -76,6 +76,212 @@
             }
         }
 
+        .python-lab {
+            overflow: hidden;
+            border: 1px solid #dbeafe;
+            border-radius: 20px;
+            background: #0b1120;
+            box-shadow: 0 24px 60px rgba(37, 99, 235, .14);
+        }
+
+        .python-lab-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            padding: .8rem 1rem;
+            background: #111827;
+            border-bottom: 1px solid #263247;
+            color: #cbd5e1;
+        }
+
+        .python-window-dots {
+            display: inline-flex;
+            gap: .4rem;
+        }
+
+        .python-window-dots span {
+            width: 10px;
+            height: 10px;
+            border-radius: 999px;
+        }
+
+        .python-lab-status {
+            display: inline-flex;
+            align-items: center;
+            gap: .45rem;
+            font-size: .72rem;
+            color: #94a3b8;
+        }
+
+        .python-status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 999px;
+            background: #64748b;
+            box-shadow: 0 0 0 4px rgba(100, 116, 139, .12);
+        }
+
+        .python-status-dot.ready {
+            background: #22c55e;
+            box-shadow: 0 0 0 4px rgba(34, 197, 94, .12);
+        }
+
+        .python-status-dot.busy {
+            background: #f59e0b;
+            box-shadow: 0 0 0 4px rgba(245, 158, 11, .14);
+            animation: python-status-pulse 1.1s ease-in-out infinite;
+        }
+
+        .python-toolbar {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: .55rem;
+            padding: .75rem 1rem;
+            background: #0f172a;
+            border-bottom: 1px solid #263247;
+        }
+
+        .python-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: .4rem;
+            min-height: 36px;
+            padding: .48rem .8rem;
+            border: 1px solid #334155;
+            border-radius: 9px;
+            color: #cbd5e1;
+            background: #172033;
+            font-size: .78rem;
+            font-weight: 700;
+            transition: transform 160ms ease, border-color 160ms ease, background-color 160ms ease;
+        }
+
+        .python-button:hover:not(:disabled) {
+            transform: translateY(-1px);
+            border-color: #60a5fa;
+        }
+
+        .python-button.run {
+            color: white;
+            border-color: #2563eb;
+            background: #2563eb;
+        }
+
+        .python-button.stop {
+            color: #fecaca;
+            border-color: #7f1d1d;
+            background: #450a0a;
+        }
+
+        .python-button:disabled {
+            cursor: not-allowed;
+            opacity: .42;
+        }
+
+        .python-shortcut {
+            margin-left: auto;
+            color: #64748b;
+            font-size: .7rem;
+        }
+
+        .python-editor-wrap {
+            position: relative;
+            min-height: 260px;
+            background: #0b1120;
+        }
+
+        .python-line-numbers {
+            position: absolute;
+            inset: 0 auto 0 0;
+            width: 48px;
+            margin: 0;
+            padding: 1rem .8rem;
+            overflow: hidden;
+            border-right: 1px solid #1e293b;
+            color: #475569;
+            font: 14px/1.65 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            text-align: right;
+            user-select: none;
+            pointer-events: none;
+        }
+
+        .python-editor {
+            display: block;
+            width: 100%;
+            min-height: 260px;
+            margin: 0;
+            padding: 1rem 1rem 1rem 4rem;
+            resize: vertical;
+            border: 0;
+            outline: 0;
+            color: #e2e8f0;
+            background: transparent;
+            caret-color: #fbbf24;
+            font: 14px/1.65 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            tab-size: 4;
+        }
+
+        .python-editor::selection {
+            background: rgba(37, 99, 235, .48);
+        }
+
+        .python-console {
+            min-height: 120px;
+            border-top: 1px solid #263247;
+            background: #080d18;
+        }
+
+        .python-console-head {
+            padding: .55rem 1rem;
+            border-bottom: 1px solid #1e293b;
+            color: #64748b;
+            font-size: .68rem;
+            font-weight: 700;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+        }
+
+        .python-output {
+            min-height: 82px;
+            max-height: 240px;
+            margin: 0;
+            padding: .85rem 1rem;
+            overflow: auto;
+            color: #a7f3d0;
+            white-space: pre-wrap;
+            overflow-wrap: anywhere;
+            font: 13px/1.6 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        }
+
+        .python-output.has-error {
+            color: #fca5a5;
+        }
+
+        @keyframes python-status-pulse {
+            50% {
+                opacity: .55;
+                transform: scale(.82);
+            }
+        }
+
+        @media (max-width: 520px) {
+            .python-shortcut {
+                display: none;
+            }
+
+            .python-lab-bar {
+                align-items: flex-start;
+            }
+
+            .python-editor,
+            .python-line-numbers {
+                font-size: 12px;
+            }
+        }
+
         .tilt-left {
             transform: rotate(-2deg);
         }
@@ -977,6 +1183,68 @@
         </div>
     </section>
 
+    <!-- Browser Python Playground -->
+    <section id="python-playground" class="max-w-5xl mx-auto px-4 py-16">
+        <div class="text-center reveal mb-9">
+            <p class="font-hand text-2xl text-accent mb-2">Try real Python right here</p>
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Change the code. Run it. See what happens.</h2>
+            <p class="text-muted max-w-2xl mx-auto leading-relaxed">No installation and no account needed. This small
+                playground runs Python safely in your browser—the same kind of experiment students begin with in the
+                course.</p>
+        </div>
+
+        <div class="python-lab reveal reveal-delay-1">
+            <div class="python-lab-bar">
+                <div class="flex items-center gap-3">
+                    <span class="python-window-dots" aria-hidden="true">
+                        <span class="bg-red-400"></span>
+                        <span class="bg-amber-400"></span>
+                        <span class="bg-green-400"></span>
+                    </span>
+                    <span class="text-xs font-mono">my_first_program.py</span>
+                </div>
+                <span class="python-lab-status" role="status" aria-live="polite">
+                    <span id="pythonStatusDot" class="python-status-dot"></span>
+                    <span id="pythonStatusText">Python loads when you run</span>
+                </span>
+            </div>
+
+            <div class="python-toolbar" aria-label="Python editor controls">
+                <button id="runPython" type="button" class="python-button run" aria-keyshortcuts="Control+Enter Meta+Enter">
+                    <i class="fa-solid fa-play" aria-hidden="true"></i> Run
+                </button>
+                <button id="stopPython" type="button" class="python-button stop" disabled>
+                    <i class="fa-solid fa-stop" aria-hidden="true"></i> Stop
+                </button>
+                <button id="clearPythonOutput" type="button" class="python-button">
+                    <i class="fa-solid fa-eraser" aria-hidden="true"></i> Clear output
+                </button>
+                <button id="resetPython" type="button" class="python-button">
+                    <i class="fa-solid fa-rotate-left" aria-hidden="true"></i> Reset code
+                </button>
+                <span class="python-shortcut">Ctrl / ⌘ + Enter to run</span>
+            </div>
+
+            <div class="python-editor-wrap">
+                <pre id="pythonLineNumbers" class="python-line-numbers" aria-hidden="true">1</pre>
+                <textarea id="pythonEditor" class="python-editor" aria-label="Python code editor" spellcheck="false"
+                    autocomplete="off" autocapitalize="off" wrap="off"># Change the name or the number of steps, then press Run
+student = "Aarav"
+
+for step in range(1, 6):
+    print(f"Step {step}: {student} is learning Python!")</textarea>
+            </div>
+
+            <div class="python-console">
+                <div class="python-console-head">Output</div>
+                <pre id="pythonOutput" class="python-output" aria-live="polite">Press Run to execute the program.</pre>
+            </div>
+        </div>
+
+        <p class="text-xs text-muted text-center mt-4"><i class="fa-solid fa-shield-halved text-green-600 mr-1"
+                aria-hidden="true"></i> Code runs locally in this browser. It is not uploaded to PixyDelta.</p>
+    </section>
+
     <!-- Curriculum -->
     <section id="curriculum" class="max-w-5xl mx-auto px-4 py-16">
         <div class="reveal text-center">
@@ -1436,6 +1704,182 @@
             const next = document.documentElement.classList.contains('dark') ? 'light' : 'dark';
             localStorage.setItem('pixydelta-theme', next);
             applyTheme(next);
+        });
+
+        // Lightweight in-browser Python playground. Pyodide is loaded only after the first run.
+        const pythonEditor = document.getElementById('pythonEditor');
+        const pythonLineNumbers = document.getElementById('pythonLineNumbers');
+        const pythonOutput = document.getElementById('pythonOutput');
+        const pythonStatusDot = document.getElementById('pythonStatusDot');
+        const pythonStatusText = document.getElementById('pythonStatusText');
+        const runPythonButton = document.getElementById('runPython');
+        const stopPythonButton = document.getElementById('stopPython');
+        const clearPythonOutputButton = document.getElementById('clearPythonOutput');
+        const resetPythonButton = document.getElementById('resetPython');
+        const pythonStorageKey = 'pixydelta-python-playground';
+        const defaultPythonCode = pythonEditor.value;
+        let pythonWorker = null;
+        let pythonRunId = 0;
+        let pythonRunTimeout = null;
+
+        function setPythonStatus(label, state = '') {
+            pythonStatusText.textContent = label;
+            pythonStatusDot.className = `python-status-dot${state ? ` ${state}` : ''}`;
+        }
+
+        function setPythonBusy(busy) {
+            runPythonButton.disabled = busy;
+            stopPythonButton.disabled = !busy;
+        }
+
+        function updatePythonLineNumbers() {
+            const lineCount = pythonEditor.value.split('\n').length;
+            pythonLineNumbers.textContent = Array.from({ length: lineCount }, (_, index) => index + 1).join('\n');
+        }
+
+        function stopPythonExecution(message = 'Execution stopped. Press Run to start again.') {
+            if (pythonWorker) {
+                pythonWorker.terminate();
+                pythonWorker = null;
+            }
+            window.clearTimeout(pythonRunTimeout);
+            pythonRunTimeout = null;
+            pythonRunId += 1;
+            setPythonBusy(false);
+            setPythonStatus('Stopped — ready to restart');
+            pythonOutput.classList.remove('has-error');
+            pythonOutput.textContent = message;
+        }
+
+        function createPythonWorker() {
+            const worker = new Worker(new URL('python-worker.mjs', window.location.href), { type: 'module' });
+
+            worker.addEventListener('message', (event) => {
+                const { type, status, runId, stdout = '', stderr = '' } = event.data || {};
+
+                if (type === 'status') {
+                    if (status === 'loading') {
+                        setPythonStatus('Loading Python for the first run…', 'busy');
+                        pythonOutput.textContent = 'Preparing the Python runtime…';
+                    } else if (status === 'ready') {
+                        setPythonStatus('Python ready', 'ready');
+                    } else if (status === 'running' && runId === pythonRunId) {
+                        setPythonStatus('Running your code…', 'busy');
+                        pythonOutput.textContent = 'Running…';
+                        window.clearTimeout(pythonRunTimeout);
+                        pythonRunTimeout = window.setTimeout(() => {
+                            stopPythonExecution('The program was stopped after 10 seconds. Check for a loop that never ends, then try again.');
+                        }, 10000);
+                    }
+                    return;
+                }
+
+                if (type === 'result' && runId === pythonRunId) {
+                    window.clearTimeout(pythonRunTimeout);
+                    pythonRunTimeout = null;
+                    setPythonBusy(false);
+                    setPythonStatus('Python ready', 'ready');
+                    pythonOutput.classList.toggle('has-error', Boolean(stderr));
+                    pythonOutput.textContent = `${stdout}${stderr}` || 'Program finished with no output.';
+                }
+            });
+
+            worker.addEventListener('error', () => {
+                stopPythonExecution('Python could not load. Check the internet connection and try again.');
+                pythonOutput.classList.add('has-error');
+                setPythonStatus('Could not load Python');
+            });
+
+            return worker;
+        }
+
+        function runPythonCode() {
+            if (runPythonButton.disabled) return;
+
+            const code = pythonEditor.value;
+            if (!code.trim()) {
+                pythonOutput.classList.add('has-error');
+                pythonOutput.textContent = 'Write some Python code first.';
+                return;
+            }
+
+            if (!('Worker' in window)) {
+                pythonOutput.classList.add('has-error');
+                pythonOutput.textContent = 'This browser cannot run the Python playground. Please use a recent browser.';
+                return;
+            }
+
+            pythonRunId += 1;
+            setPythonBusy(true);
+            pythonOutput.classList.remove('has-error');
+            pythonOutput.textContent = pythonWorker ? 'Running…' : 'Starting Python…';
+            setPythonStatus(pythonWorker ? 'Running your code…' : 'Starting Python…', 'busy');
+
+            if (!pythonWorker) pythonWorker = createPythonWorker();
+            pythonWorker.postMessage({ type: 'run', code, runId: pythonRunId });
+        }
+
+        try {
+            const savedPythonCode = localStorage.getItem(pythonStorageKey);
+            if (savedPythonCode) pythonEditor.value = savedPythonCode;
+        } catch (_) {
+            // The editor still works when storage is unavailable.
+        }
+
+        updatePythonLineNumbers();
+
+        pythonEditor.addEventListener('input', () => {
+            updatePythonLineNumbers();
+            try {
+                localStorage.setItem(pythonStorageKey, pythonEditor.value);
+            } catch (_) {
+                // Ignore storage errors in private or restricted browsing modes.
+            }
+        });
+
+        pythonEditor.addEventListener('scroll', () => {
+            pythonLineNumbers.scrollTop = pythonEditor.scrollTop;
+        });
+
+        pythonEditor.addEventListener('keydown', (event) => {
+            if ((event.ctrlKey || event.metaKey) && event.key === 'Enter') {
+                event.preventDefault();
+                runPythonCode();
+                return;
+            }
+
+            if (event.key === 'Tab') {
+                event.preventDefault();
+                const start = pythonEditor.selectionStart;
+                const end = pythonEditor.selectionEnd;
+                pythonEditor.setRangeText('    ', start, end, 'end');
+                pythonEditor.dispatchEvent(new Event('input'));
+            }
+        });
+
+        runPythonButton.addEventListener('click', runPythonCode);
+        stopPythonButton.addEventListener('click', () => stopPythonExecution());
+
+        clearPythonOutputButton.addEventListener('click', () => {
+            pythonOutput.classList.remove('has-error');
+            pythonOutput.textContent = '';
+        });
+
+        resetPythonButton.addEventListener('click', () => {
+            if (pythonWorker) {
+                pythonWorker.terminate();
+                pythonWorker = null;
+            }
+            window.clearTimeout(pythonRunTimeout);
+            pythonRunTimeout = null;
+            pythonRunId += 1;
+            pythonEditor.value = defaultPythonCode;
+            pythonEditor.dispatchEvent(new Event('input'));
+            pythonOutput.classList.remove('has-error');
+            pythonOutput.textContent = 'Code and Python memory reset. Press Run when you are ready.';
+            setPythonBusy(false);
+            setPythonStatus('Python loads when you run');
+            pythonEditor.focus();
         });
 
         // Reveal sections as they enter the viewport; no dependency required.
