@@ -7,6 +7,7 @@
     <title>PixyDelta | Coding & AI for Kids in Cooch Behar</title>
     <meta name="description"
         content="A 12-week Python, AI and capstone learning journey for Classes 6-9 in Cooch Behar. Real projects, practical mentoring, and a clear path from Python to AI to capstone building.">
+    <link rel="icon" href="assets/pixydelta-mark-v2.png" type="image/png">
 
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -45,6 +46,34 @@
             background-position: bottom;
             background-size: 100% 8px;
             padding-bottom: 8px;
+        }
+
+        .brand-logo {
+            display: inline-flex;
+            align-items: center;
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .brand-lockup {
+            display: block;
+            width: 205px;
+            height: auto;
+            transition: transform 180ms ease;
+        }
+
+        .brand-logo:hover .brand-lockup {
+            transform: translateY(-1px) rotate(-2deg);
+        }
+
+        .brand-lockup-dark {
+            display: none;
+        }
+
+        @media (max-width: 380px) {
+            .brand-lockup {
+                width: 180px;
+            }
         }
 
         .tilt-left {
@@ -278,79 +307,120 @@
             }
         }
 
-        .ai-orbit {
+        .brain-stage {
             position: relative;
-            width: 170px;
-            height: 170px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            width: min(100%, 360px);
+            aspect-ratio: 6 / 5;
+            margin: 0 auto .75rem;
+            display: grid;
+            place-items: center;
+            isolation: isolate;
         }
 
-        .ai-core {
-            width: 82px;
-            height: 82px;
-            border-radius: 22px;
-            background: white;
-            border: 1px solid #dbeafe;
-            box-shadow: 0 14px 32px rgba(37, 99, 235, .12);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            color: #2563eb;
+        .brain-stage::before {
+            content: '';
+            position: absolute;
+            width: 66%;
+            aspect-ratio: 1;
+            border-radius: 999px;
+            background: radial-gradient(circle, rgba(96, 165, 250, .22), rgba(37, 99, 235, .07) 48%, transparent 72%);
+            filter: blur(8px);
+            animation: brain-aura 4s ease-in-out infinite;
+            z-index: -1;
+        }
+
+        .brain-paths {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            overflow: visible;
+        }
+
+        .brain-paths .orbit-line {
+            fill: none;
+            stroke: url(#orbitGradient);
+            stroke-width: 1.2;
+            stroke-dasharray: 4 8;
+        }
+
+        .brain-paths .flow-light {
+            --pulse-color: #fbbf24;
+            fill: var(--pulse-color);
+            stroke: var(--pulse-color);
+            stroke-width: 7;
+            stroke-opacity: .2;
+        }
+
+        .brain-paths .flow-light.blue {
+            --pulse-color: #60a5fa;
+        }
+
+        .brain-paths .flow-light.violet {
+            --pulse-color: #a78bfa;
+        }
+
+        .orbit-back .orbit-line {
+            opacity: .26;
+        }
+
+        .orbit-back .flow-light {
+            opacity: .5;
+            stroke-width: 5;
+        }
+
+        .orbit-front .orbit-line {
+            opacity: .62;
+        }
+
+        .orbit-front .flow-light {
+            stroke-width: 9;
+            stroke-opacity: .26;
+        }
+
+        .brain-object {
+            transform-box: view-box;
+            transform-origin: 180px 150px;
             animation: core-breathe 4s ease-in-out infinite;
         }
 
-        .orbit-dot {
-            position: absolute;
-            width: 42px;
-            height: 42px;
+        .brain-shadow {
+            fill: rgba(37, 99, 235, .13);
+            filter: blur(16px);
+        }
+
+        .brain-image {
+            filter: drop-shadow(0 17px 15px rgba(30, 64, 175, .18));
+        }
+
+        .brain-caption {
+            width: max-content;
+            max-width: calc(100% - 2rem);
+            margin: -1.1rem auto 1.2rem;
+            padding: .45rem .8rem;
             border-radius: 999px;
-            background: white;
-            border: 1px solid #e5e7eb;
-            box-shadow: 0 7px 18px rgba(0, 0, 0, .07);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #6b7280;
+            background: rgba(255, 255, 255, .82);
+            border: 1px solid #dbeafe;
+            color: #2563eb;
+            font-size: .72rem;
+            font-weight: 700;
+            letter-spacing: .08em;
+            text-align: center;
+            text-transform: uppercase;
+            box-shadow: 0 7px 22px rgba(37, 99, 235, .08);
+            backdrop-filter: blur(7px);
         }
 
-        .orbit-dot.a {
-            top: 4px;
-            left: 64px;
-        }
-
-        .orbit-dot.b {
-            right: 2px;
-            bottom: 30px;
-        }
-
-        .orbit-dot.c {
-            left: 2px;
-            bottom: 30px;
-        }
-
-        .ai-orbit::before {
-            content: '';
-            position: absolute;
-            inset: 20px;
-            border: 1px dashed #bfdbfe;
-            border-radius: 999px;
-            animation: orbit-spin 18s linear infinite;
-        }
-
-        @keyframes orbit-spin {
-            to {
-                transform: rotate(360deg);
+        @keyframes brain-aura {
+            50% {
+                opacity: .68;
+                transform: scale(1.1);
             }
         }
 
         @keyframes core-breathe {
             50% {
-                transform: scale(1.035);
-                box-shadow: 0 16px 36px rgba(37, 99, 235, .17);
+                transform: scale(1.025) translateY(-2px);
             }
         }
 
@@ -556,6 +626,10 @@
                 opacity: 1;
                 transform: none;
             }
+
+            .flow-light {
+                display: none;
+            }
         }
 
         /* Dark theme */
@@ -642,10 +716,14 @@
             color: #f9fafb !important;
         }
 
-        html.dark .ai-core,
-        html.dark .orbit-dot {
-            background: #111827 !important;
-            border-color: #334155 !important;
+        html.dark .brain-object {
+            filter: saturate(.92) brightness(.94);
+        }
+
+        html.dark .brain-caption {
+            background: rgba(15, 23, 42, .82);
+            border-color: rgba(96, 165, 250, .28);
+            color: #93c5fd;
         }
 
         html.dark .project-card:hover,
@@ -655,6 +733,14 @@
 
         html.dark .hand-underline {
             filter: brightness(1.08);
+        }
+
+        html.dark .brand-lockup-light {
+            display: none;
+        }
+
+        html.dark .brand-lockup-dark {
+            display: block;
         }
 
         .theme-toggle {
@@ -707,9 +793,12 @@
     <!-- Simple Navigation -->
     <nav class="sticky top-0 bg-paper/95 backdrop-blur-sm border-b border-gray-200 z-50">
         <div class="max-w-5xl mx-auto px-4 py-4 flex justify-between items-center">
-            <div class="flex items-center gap-2">
-                <span class="font-hand text-3xl text-primary font-bold">PixyDelta</span>
-            </div>
+            <a href="#" class="brand-logo" aria-label="PixyDelta home">
+                <img class="brand-lockup brand-lockup-light" src="assets/pixydelta-logo-v2.png" alt="PixyDelta"
+                    width="2049" height="480">
+                <img class="brand-lockup brand-lockup-dark" src="assets/pixydelta-logo-v2-dark.png" alt="PixyDelta"
+                    width="2049" height="480">
+            </a>
             <div class="flex items-center gap-2">
                 <button id="themeToggle" type="button" class="theme-toggle" aria-label="Switch to dark theme"
                     title="Toggle dark theme">
@@ -1079,7 +1168,7 @@
     </section>
 
     <!-- AI Parent Interest Section -->
-    <section class="bg-blue-50/60 border-y border-blue-100 py-16">
+    <section id="ai-literacy" class="bg-blue-50/60 border-y border-blue-100 py-16">
         <div class="max-w-5xl mx-auto px-4">
             <div class="grid md:grid-cols-2 gap-10 md:gap-14 items-center">
                 <div class="reveal">
@@ -1122,12 +1211,73 @@
                     </div>
                 </div>
                 <div class="reveal reveal-delay-1">
-                    <div class="ai-orbit" aria-hidden="true">
-                        <div class="ai-core"><i class="fa-solid fa-robot"></i></div>
-                        <div class="orbit-dot a"><i class="fa-solid fa-code"></i></div>
-                        <div class="orbit-dot b"><i class="fa-solid fa-lightbulb"></i></div>
-                        <div class="orbit-dot c"><i class="fa-solid fa-shield-halved"></i></div>
+                    <div class="brain-stage" role="img"
+                        aria-label="A human brain surrounded by flowing lights, representing ideas moving around human judgment">
+                        <svg class="brain-paths" viewBox="0 0 360 300" aria-hidden="true">
+                            <defs>
+                                <linearGradient id="orbitGradient" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0" stop-color="#60a5fa" stop-opacity=".12" />
+                                    <stop offset=".5" stop-color="#2563eb" stop-opacity=".85" />
+                                    <stop offset="1" stop-color="#a78bfa" stop-opacity=".15" />
+                                </linearGradient>
+                                <path id="orbitOne" d="M30 150C30 65 330 65 330 150S30 235 30 150Z" />
+                                <path id="orbitTwo" d="M77 65C15 125 106 258 180 248S345 125 283 65S120 24 77 65Z" />
+                                <path id="orbitThree" d="M80 225C20 165 75 45 180 52S340 165 280 225S125 270 80 225Z" />
+                                <clipPath id="orbitBackHalf">
+                                    <rect x="0" y="0" width="360" height="151" />
+                                </clipPath>
+                                <clipPath id="orbitFrontHalf">
+                                    <rect x="0" y="149" width="360" height="151" />
+                                </clipPath>
+                            </defs>
+                            <g class="orbit-back" clip-path="url(#orbitBackHalf)">
+                                <use href="#orbitOne" class="orbit-line" />
+                                <use href="#orbitTwo" class="orbit-line" />
+                                <use href="#orbitThree" class="orbit-line" />
+                                <circle r="4.5" class="flow-light">
+                                    <animateMotion dur="6.5s" repeatCount="indefinite"><mpath href="#orbitOne" /></animateMotion>
+                                </circle>
+                                <circle r="3" class="flow-light blue">
+                                    <animateMotion dur="6.5s" begin="-3.25s" repeatCount="indefinite"><mpath href="#orbitOne" /></animateMotion>
+                                </circle>
+                                <circle r="4" class="flow-light blue">
+                                    <animateMotion dur="8s" begin="-1.5s" repeatCount="indefinite"><mpath href="#orbitTwo" /></animateMotion>
+                                </circle>
+                                <circle r="3.5" class="flow-light violet">
+                                    <animateMotion dur="9.5s" begin="-5s" repeatCount="indefinite"><mpath href="#orbitThree" /></animateMotion>
+                                </circle>
+                                <circle r="2.5" class="flow-light">
+                                    <animateMotion dur="9.5s" begin="-1s" repeatCount="indefinite"><mpath href="#orbitThree" /></animateMotion>
+                                </circle>
+                            </g>
+                            <g class="brain-object">
+                                <ellipse class="brain-shadow" cx="180" cy="170" rx="76" ry="58" />
+                                <image class="brain-image" href="assets/realistic-human-brain-640.png" x="88" y="58"
+                                    width="184" height="184" preserveAspectRatio="xMidYMid meet" />
+                            </g>
+                            <g class="orbit-front" clip-path="url(#orbitFrontHalf)">
+                                <use href="#orbitOne" class="orbit-line" />
+                                <use href="#orbitTwo" class="orbit-line" />
+                                <use href="#orbitThree" class="orbit-line" />
+                                <circle r="4.5" class="flow-light">
+                                    <animateMotion dur="6.5s" repeatCount="indefinite"><mpath href="#orbitOne" /></animateMotion>
+                                </circle>
+                                <circle r="3" class="flow-light blue">
+                                    <animateMotion dur="6.5s" begin="-3.25s" repeatCount="indefinite"><mpath href="#orbitOne" /></animateMotion>
+                                </circle>
+                                <circle r="4" class="flow-light blue">
+                                    <animateMotion dur="8s" begin="-1.5s" repeatCount="indefinite"><mpath href="#orbitTwo" /></animateMotion>
+                                </circle>
+                                <circle r="3.5" class="flow-light violet">
+                                    <animateMotion dur="9.5s" begin="-5s" repeatCount="indefinite"><mpath href="#orbitThree" /></animateMotion>
+                                </circle>
+                                <circle r="2.5" class="flow-light">
+                                    <animateMotion dur="9.5s" begin="-1s" repeatCount="indefinite"><mpath href="#orbitThree" /></animateMotion>
+                                </circle>
+                            </g>
+                        </svg>
                     </div>
+                    <p class="brain-caption">Human judgment at the centre</p>
                     <div class="bg-white rounded-2xl border border-blue-100 shadow-sm p-6 mt-3">
                         <p class="text-sm uppercase tracking-wider text-primary font-semibold mb-3">A healthier AI habit
                         </p>
